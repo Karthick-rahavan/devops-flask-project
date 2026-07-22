@@ -5,7 +5,7 @@ import os
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get(
     'DATABASE_URL',
-    'postgresql://postgres:postgres@db:5432/postgres'
+    'postgresql+psycopg://postgres:postgres@db:5432/postgres'
 )
 db = SQLAlchemy(app)
 
